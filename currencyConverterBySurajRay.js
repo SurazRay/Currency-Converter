@@ -68,7 +68,6 @@ button.addEventListener("click", async (evt) => {
     let data = await getData.json();
 
     output(data, money);  //4
-    information(data);  //6
 });
 
 // Showing output -- 4
@@ -97,9 +96,6 @@ mode.addEventListener("click", () => {
 
 // Information -- 6
 
-function information(data) {
-    let info = document.querySelector(".info");
-    info.addEventListener("click", () => {
-        alert(`Created by Suraj Ray \nExchange rates are exactly updated and accurate as the used API is only for development purposes.\nLast updated date of this Exchange rate is ${data["date"]}\nThankyou and Enjoy\n- Suraj`);
+    button.addEventListener("click", () => {
+        console.log(`Created by Suraj Ray \nExchange rates are not exactly updated and accurate as the used API is only for development purposes.\nLast updated date of this Exchange rate is ${data["date"]}\nThankyou and Enjoy\n- Suraj`);
     });
-}
