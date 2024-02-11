@@ -7,18 +7,13 @@
 }
 
 
-.mode,
-.info {
+.mode{
     float: right;
     margin: 5px;
     padding: 3px;
     color: black;
     background-color: white;
     border-radius: 1rem;
-}
-
-.info {
-    float: left;
 }
 
 h1 {
@@ -83,11 +78,10 @@ select {
     background-color: white;
 }
 
-/*Screen mode Black & white*/
+/*Screen mode Black & Blue*/
 
 .body,
-.mode,
-.info {
+.mode{
 
     background-color: yellow;
 }
