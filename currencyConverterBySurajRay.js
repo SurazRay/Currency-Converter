@@ -2,7 +2,8 @@ const url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/curre
 
 const button = document.querySelector(".button");
 
-//Fetchinf the chosen currencies
+//Fetching the chosen currencies
+
 const from = document.querySelector(".from select");
 const to = document.querySelector(".to select");
 
@@ -26,6 +27,7 @@ for (let drop of options) {
         }
     }
     //if new country chosen calling flag change function
+    
     drop.addEventListener("change", (evt) => {
         updateFlag(evt.target);  //2
     });
@@ -68,7 +70,6 @@ button.addEventListener("click", async (evt) => {
     let data = await getData.json();
 
     output(data, money);  //4
-    info(data);  //6
 });
 
 // Showing output -- 4
@@ -94,11 +95,3 @@ mode.addEventListener("click", () => {
         screen = "light";
     }
 });
-
-// Information -- 6
-
-function info(data){
-    button.addEventListener("click", () => {
-        console.log(`Created by Suraj Ray \nExchange rates are not exactly updated and accurate as the used API is only for development purposes.\nLast updated date of this Exchange rate is ${data["date"]}\nThankyou and Enjoy\n- Suraj`);
-    });
-}
